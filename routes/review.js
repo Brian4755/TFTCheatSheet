@@ -1,10 +1,9 @@
 import { Router } from 'express'
+import * as reviewCtrl from '../controllers/review.js'
 
 const router = Router()
 
-router.get('/', )
-
-
+router.get('/', reviewCtrl.index)
 
 
 export {
