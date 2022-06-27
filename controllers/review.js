@@ -1,6 +1,6 @@
 import { Review } from '../models/review.js'
 
-function(req, res) {
+function index(req, res) {
   console.log('working')
 }
 
