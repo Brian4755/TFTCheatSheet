@@ -1,0 +1,18 @@
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+<section>
+  <h1>Item Reviews</h1>
+
+  <ul>
+    <% review.forEach(review => { %>
+      <li> <%= review.item %> </li>
+      <li> <%= review.champion %> </li>
+      <li> <%= review.rating %> </li>
+      <li> <%= review.notes %> </li>
+      <li> <%= review.reviewer %> </li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('./partials/footer') %>
