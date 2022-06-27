@@ -17,6 +17,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
+import { router as reviewRouter } from './routes/review.js'
 
 // create the express app
 const app = express()
@@ -38,6 +39,7 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use('/review', reviewRouter)
 
 // session middleware
 app.use(
