@@ -14,7 +14,7 @@ function create(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/reviews')
+    res.redirect('/')
   })
 }
 
@@ -33,8 +33,25 @@ function index(req, res) {
   })
 }
 
+function deleteReview(req, res) {
+  Review.findById(req.params.id)
+  .then(review => {
+    if (review.owner.equals(req.user.profile._id)) {
+      review.delete()
+      .then(() => {
+        res.redirect('/reviews')
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
 export {
   newReview as new,
   create,
   index,
+  deleteReview as delete,
 }

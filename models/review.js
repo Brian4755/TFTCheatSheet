@@ -7,7 +7,7 @@ const reviewSchema = new Schema({
   champion: String,
   tier: String,
   notes: String,
-  reviewer: {type: Schema.Types.ObjectId, ref: "Profile"},
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
 }, {
   timestamps: true
 })
