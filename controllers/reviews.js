@@ -2,9 +2,9 @@ import { Review } from '../models/review.js'
 
 function index(req, res) {
   Review.find({})
-  .then(review => {
-    res.render('review/index', {
-      review,
+  .then(reviews => {
+    res.render('reviews/index', {
+      reviews,
       title: "Item Reviews"
     })
   })
