@@ -107,6 +107,11 @@ p {
   color: rgb(50, 59, 64);
 }
 
+.container {
+  margin: 0;
+  margin-bottom: -4px;
+}
+
 .imageIcon {
   height: 35px;
   margin-top: auto;
