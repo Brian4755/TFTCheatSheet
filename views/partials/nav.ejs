@@ -19,20 +19,26 @@
     <% } %>
     <a class="reviews" href="/reviews">Reviews</a>
     <a class="champions" href="/champions">Champions</a>
-
-
     <% if (user) { %>
       <div class="dropdownTwo">
-      <a class="logout" href="/auth/logout">Logout</a>
-      <div class="dropdown-contentTwo">
-        <p>Signed in as <%= user.profile.name %></p>
-      </div>
+        <a class="logout" href="/auth/logout">Logout</a>
+        <div class="dropdown-contentTwo">
+          <p>Signed in as <%= user.profile.name %></p>
+        </div>
       </div>
     <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
+      <div id="loginFix" class="dropdown">
+        <a class="reviews">
+          Login
+        </a>
+        <div id="login" class="dropdown-content">
+          <a href="/auth/google" class="siwg-link">
+            <button type="submit" class="siwg">
+              <img id="siwg-image" alt="Sign in with Google" />
+            </button>
+          </a>
+        </div>
+      </div>
     <% } %>
   </nav>
+</body>

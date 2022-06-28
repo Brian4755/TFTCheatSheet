@@ -113,3 +113,11 @@ p {
   margin-bottom: auto;
   margin-left: 5px;
 }
+
+#login {
+  left: -158px;
+}
+
+#loginFix {
+  margin-left: 20px;
+}
