@@ -1,13 +1,26 @@
   <% if (!user) { %>
     <link rel="stylesheet" href="/stylesheets/siwg.css">
   <% } %>
+  <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
 <body>
   <nav>
+    <img src="/public/images/poro.png" alt="Poro Icon">
     <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
+      <div class="dropdown">
+        <button class="dropdown-button">
+          +
+        </button>
+        <div class="dropdown-content">
+          <a href="/auth/addchampion">Add Champion</a>
+          <a href="/auth/addreview">Add Review</a>
+        </div>
+      </div>
+    <% } %>
+    <a class="reviews" href="/reviews">Reviews</a>
+    <a href="/champions">Champions</a>
+    <% if (user) { %>
+      <a class="logout" href="/auth/logout">Logout</a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">

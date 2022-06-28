@@ -1,0 +1,71 @@
+nav {
+  padding: 0px 5px 0px 5px;
+  background-color:rgb(49, 49, 50);
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(214, 214, 214);
+  margin-left: 20px;
+}
+
+a:hover {
+  color:rgb(252, 249, 249)
+}
+
+.reviews {
+  margin-left: auto;
+}
+
+.logout {
+  margin-right: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.dropdown-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(45, 56, 61);
+  color: rgb(252, 249, 249);
+  border: none;
+}
+
+.dropdown-button:hover {
+  background-color: rgb(19, 23, 26);
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  margin-left: 0px;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(240, 240, 240);
+  color: rgb(50, 59, 64);
+}
+
+img {
+  margin-left: 5px;
+}
