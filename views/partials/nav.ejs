@@ -21,7 +21,7 @@
     <a class="champions" href="/champions">Champions</a>
     <% if (user) { %>
       <div class="dropdownTwo">
-        <a class="logout" href="/auth/logout">Logout</a>
+        <a class="logout" href="/auth/logout">Sign out</a>
         <div class="dropdown-contentTwo">
           <p>Signed in as <%= user.profile.name %></p>
         </div>
@@ -29,7 +29,7 @@
     <% } else { %>
       <div id="loginFix" class="dropdown">
         <a class="reviews">
-          Login
+          Sign in
         </a>
         <div id="login" class="dropdown-content">
           <a href="/auth/google" class="siwg-link">
