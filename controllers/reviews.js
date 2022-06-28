@@ -15,6 +15,19 @@ function index(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  Review.create(req.body)
+  .then(review => {
+    res.redirect('/reviews')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/reviews')
+  })
+}
+
 export {
-  index
+  index,
+  create
 }

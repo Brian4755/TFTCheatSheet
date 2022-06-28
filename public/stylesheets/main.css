@@ -20,6 +20,7 @@ a:hover {
 
 .logout {
   margin-right: 5px;
+  margin-top: 115px;
 }
 
 .dropdown {
@@ -67,10 +68,6 @@ a:hover {
   color: rgb(50, 59, 64);
 }
 
-img {
-  margin-left: 5px;
-}
-
 .dropdownTwo {
   position: relative;
   display: inline-block;
@@ -114,4 +111,5 @@ p {
   height: 35px;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 5px;
 }
