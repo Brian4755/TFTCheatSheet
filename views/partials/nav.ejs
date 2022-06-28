@@ -19,8 +19,15 @@
     <% } %>
     <a class="reviews" href="/reviews">Reviews</a>
     <a href="/champions">Champions</a>
+
+
     <% if (user) { %>
+      <div class="dropdownTwo">
       <a class="logout" href="/auth/logout">Logout</a>
+      <div class="dropdown-contentTwo">
+        <p>Signed in as <%= user.profile.name %></p>
+      </div>
+      </div>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">

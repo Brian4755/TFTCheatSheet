@@ -70,3 +70,48 @@ a:hover {
 img {
   margin-left: 5px;
 }
+
+
+
+
+
+
+
+.dropdownTwo {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-contentTwo {
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: -5px;
+  min-width: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  padding:5px;
+  margin: auto;
+}
+
+.dropdownTwo:hover .dropdown-contentTwo {
+  display: block;
+}
+
+.dropdown-contentTwo a {
+  display: block;
+  padding: 10px;
+  margin-left: 0px;
+  font-size: 15px;
+  color: rgb(161, 159, 159);
+}
+
+.dropdown-contentTwo a:hover {
+  background-color: rgb(240, 240, 240);
+  color: rgb(50, 59, 64);
+}
