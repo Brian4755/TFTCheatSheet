@@ -6,10 +6,10 @@
 
   <ul>
     <% reviews.forEach(review => { %>
-      <li> <%= review.item %> </li>
-      <li> <%= review.champion %> </li>
-      <li> <%= review.rating %> </li>
-      <li> <%= review.notes %> </li>
+      <li>Item Name: <%= review.item %> </li>
+      <li>Champion: <%= review.champion %> </li>
+      <li>Tier: <%= review.tier %> </li>
+      <li>Notes: <%= review.notes %> </li>
       <li> <%= review.reviewer %> </li>
     <% }) %>
   </ul>

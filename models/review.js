@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema({
   item: String,
-  champion: {type: Schema.Types.ObjectId, ref: "Champion"},
-  rating: Number,
+  champion: String,
+  tier: String,
   notes: String,
   reviewer: {type: Schema.Types.ObjectId, ref: "Profile"},
 }, {

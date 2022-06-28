@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<section>
+<% if (user) { %>
+  <h2>Add a Review</h2>
+  <form action="/reviews" method="POST">
+    <label>Item Name:</label>
+    <input type="text" name="item">
+    <label>Champion:</label>
+    <input type="text" name="champion">
+    <label>Tier(A-D):</label>
+    <input type="text" name="tier">
+    <label>Notes:</label>
+    <input type="text" name="notes">
+    <button class="btn" type="submit">Submit Review</button>
+  </form>
+<% } %>
+</section>
+
+
+<%- include('../partials/footer') %>

@@ -7,6 +7,9 @@ const router = Router()
 // GET localhost:3000/reviews
 router.get('/', reviewsCtrl.index)
 
+// GET localhost:3000/reviews/new
+router.get('/new', isLoggedIn, reviewsCtrl.new)
+
 // POST localhost:3000/reviews
 router.post('/', isLoggedIn, reviewsCtrl.create)
 
