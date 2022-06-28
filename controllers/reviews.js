@@ -1,6 +1,7 @@
 import { Review } from '../models/review.js'
 
 function index(req, res) {
+  console.log(res.locals, 'here')
   Review.find({})
   .then(reviews => {
     res.render('reviews/index', {

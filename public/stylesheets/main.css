@@ -71,12 +71,6 @@ img {
   margin-left: 5px;
 }
 
-
-
-
-
-
-
 .dropdownTwo {
   position: relative;
   display: inline-block;
@@ -114,4 +108,10 @@ p {
 .dropdown-contentTwo a:hover {
   background-color: rgb(240, 240, 240);
   color: rgb(50, 59, 64);
+}
+
+.imageIcon {
+  height: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
