@@ -1,8 +1,14 @@
 import { Review } from '../models/review.js'
+import { Champion } from '../models/champion.js'
+
 
 function newReview(req, res) {
-  res.render("reviews/new", {
-    title: 'Add Review'
+  Champion.find({})
+  .then(champions => {
+    res.render('reviews/new', {
+      title: 'Add Review',
+      champions
+    })
   })
 }
 
