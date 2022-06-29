@@ -49,9 +49,16 @@ function deleteReview(req, res) {
   })
 }
 
+function edit(req, res) {
+  res.render('reviews/edit', {
+    title: 'Update Review'
+  })
+}
+
 export {
   newReview as new,
   create,
   index,
   deleteReview as delete,
+  edit
 }

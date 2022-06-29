@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 <section>
 <% if (user) { %>
-  <h2>Add a Review</h2>
+  <h2>Update Review</h2>
   <form action="/reviews" method="POST" autocomplete="off">
     <label>Item Name:</label>
     <input type="text" name="item" autocomplete="off">
@@ -13,7 +13,7 @@
     <input type="text" name="tier" autocomplete="off">
     <label>Notes:</label>
     <input type="text" name="notes" autocomplete="off">
-    <button class="btn" type="submit">Submit Review</button>
+    <button class="btn" type="submit">Update Review</button>
   </form>
 <% } %>
 </section>
