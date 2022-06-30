@@ -35,5 +35,7 @@
 <ul>
   <li>Add an API champions page where users can see stats of a champion of interest.</li>
   <li>Link users with their TFT account which displays their rank.</li>
+  <li>Have required texts witin review forms.</li>
+  <li>Create a limit to how many posts a user can create a day.</li>
 </ul>
 <br>
