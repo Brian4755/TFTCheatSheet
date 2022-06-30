@@ -13,6 +13,9 @@ router.post('/', isLoggedIn, championsCtrl.create)
 // DELETE localhost:3000/champions/:id
 router.delete('/:id', championsCtrl.delete)
 
+// GET localhost:3000/champions/index
+router.get('/', championsCtrl.index)
+
 export {
   router
 }

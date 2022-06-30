@@ -31,9 +31,20 @@ function deleteChampion(req, res) {
   })
 }
 
+function index(req, res) {
+  Champion.find({})
+  .then(champions => {
+    res.render('champions/index', {
+      champions,
+      title: 'Champions List'
+    })
+  })
+}
+
 
 export {
   newChampion as new,
   create,
-  deleteChampion as delete
+  deleteChampion as delete,
+  index
 }
