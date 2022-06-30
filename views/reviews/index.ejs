@@ -8,16 +8,19 @@
   <ul>
     <% reviews.forEach(review => { %>
       <li>Item Name: <%= review.item %> </li>
-      <li>Champion: <%= review.champion %> </li>
+      <li>Champion: <%= review.champions %> </li>
       <li>Tier: <%= review.tier %> </li>
       <li>Notes: <%= review.notes %> </li>
-      <li> <%= review.reviewer %> </li>
+      <li> <%= review.owner.name %> </li>
       <% if (review.owner?.equals(user?.profile._id)) { %>
         <form action="/reviews/<%= review._id %>/edit" method="GET">
           <button class="btn" type="submit">Edit Review</button>
         </form>
         <form action="/reviews/<%= review._id %>?_method=DELETE" method="POST">
           <button class="btn" type="submit">Delete Review</button>
+        </form>
+        <form action="/reviews/<%= review._id %>" method="GET">
+          <button class="btn" type="submit">DETAILS</button>
         </form>
         <% } %>
         <div class="space"></div>

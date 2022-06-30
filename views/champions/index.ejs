@@ -1,0 +1,16 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/review.css">
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Item Reviews</h1>
+  <% champions.forEach(champion => { %>
+    <li>Champions: <%= champions.name %> </li>
+    <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
+      <button class="btn" type="submit">x</button>
+    </form>
+    <div class="space"></div>
+  <% }) %>
+</section>
+
+<%- include('../partials/footer') %>

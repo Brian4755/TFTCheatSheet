@@ -25,8 +25,8 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  console.log(res.locals, 'here')
   Review.find({})
+  .populate('owner')
   .then(reviews => {
     res.render('reviews/index', {
       reviews,
@@ -59,6 +59,48 @@ function edit(req, res) {
   res.render('reviews/edit', {
     title: 'Update Review'
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+function update(req, res) {
+  Review.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(review => {
+    res.redirect(`/reviews/${review._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
+
+function show(req, res) {
+  Review.findById(req.params.id)
+  .populate('owner')
+  .populate('champions')
+  .then(review => {
+    Champion.find({})
+    .then(champions => {
+      res.render('reviews/show', {
+        review,
+        title: 'Update Review',
+        champions
+      })  
+    })
+  })
+}
+
+function addToChampion(req, res) {
+  Review.findById(req.params.id)
+  .then(review => {
+    review.champions.push(req.body.championId)
+    review.save()
+    .then(() => {
+      res.redirect(`/reviews/${review._id}`)
+    })
+  })
 }
 
 export {
@@ -66,5 +108,8 @@ export {
   create,
   index,
   deleteReview as delete,
-  edit
+  edit,
+  update,
+  show,
+  addToChampion
 }

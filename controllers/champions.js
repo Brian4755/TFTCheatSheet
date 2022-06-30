@@ -17,9 +17,23 @@ function create(req, res) {
   })
 }
 
+function deleteChampion(req, res) {
+  Champion.findById(req.params.id)
+  .then(champion => {
+    champion.delete()
+    .then(() => {
+      res.redirect('/champions')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 
 export {
   newChampion as new,
   create,
+  deleteChampion as delete
 }

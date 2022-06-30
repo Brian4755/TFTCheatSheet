@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<main>
+  <h1>Review Details</h1>
+  <section>
+    <div>Item: </div>
+    <div><%= review.item %></div>
+    <div>Champion:</div>
+    <ul>
+      <% review.champions.forEach(champion => { %>
+        <li><%= champion.name %></li>
+      <% }) %>
+    </ul>
+    <div><%= review.champion %></div>
+    <div>Tier: </div>
+    <div><%= review.tier %></div>
+    <div>Notes: </div>
+    <div><%= review.notes %></div>
+    <div>Owner: </div>
+    <div><%= review.owner.name %></div>
+  </section>
+  <form id="add-per-to-champions" action="/reviews/<%= review._id %>/champions" method="POST">
+    <select name="championId">
+      <% champions.forEach(champion => { %>
+        <option value="<%= champion._id %>"><%= champion.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Champion</button>
+  </form>
+</main>
+
+
+
+<%- include('../partials/footer') %>

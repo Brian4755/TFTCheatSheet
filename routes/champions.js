@@ -10,6 +10,9 @@ router.get('/new', isLoggedIn, championsCtrl.new)
 // POST localhost:3000/champions
 router.post('/', isLoggedIn, championsCtrl.create)
 
+// DELETE localhost:3000/champions/:id
+router.delete('/:id', championsCtrl.delete)
+
 export {
   router
 }

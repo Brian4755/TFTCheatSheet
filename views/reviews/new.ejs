@@ -1,22 +1,13 @@
 <%- include('../partials/html-head') %>
 
 <%- include('../partials/nav') %>
+<main>
 <section>
 <% if (user) { %>
   <h2>Add a Review</h2>
   <form action="/reviews" method="POST" autocomplete="off">
     <label>Item Name:</label>
     <input type="text" name="item" autocomplete="off">
-
-    <form id="add-per-to-champions" action="/champions/new" method="POST">
-      <select name="championId">
-        <% champions.forEach(champion => { %>
-          <option value="<%= champion._id %>"><%= champion.name %></option>
-        <% }) %>
-      </select>
-      <button type="submit">Add Champion</button>
-    </form>
-
     <label>Tier(A-D):</label>
     <input type="text" name="tier" autocomplete="off">
     <label>Notes:</label>
@@ -25,6 +16,7 @@
   </form>
 <% } %>
 </section>
+</main>
 
 
 <%- include('../partials/footer') %>
