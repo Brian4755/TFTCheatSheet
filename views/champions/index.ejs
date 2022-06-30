@@ -5,7 +5,7 @@
 <section>
   <h1>List of Added Champions</h1>
   <% champions.forEach(champion => { %>
-    <li>Champions: <%= champions.name %> </li>
+    <li>Champions: <%= champion.name %> </li>
     <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">x</button>
     </form>
