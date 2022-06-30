@@ -1,12 +1,55 @@
 li {
   list-style-type: none;
-  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 h1 {
   margin-left: 5px;
+  text-align: center;
 }
 
 .space {
   margin-top: 25px;
+}
+
+.btn {
+  float: left;
+}
+
+body {
+  font-size: 15px;
+}
+
+.owner-name {
+  font-size: 20px;
+  color:rgb(28, 133, 133);
+  font-weight: bold;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  float: left;
+  margin-right: 30px;
+  margin-top: -7px;
+}
+
+.item-name {
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.champion-list {
+  list-style-type: square;
+  margin-bottom: 0px;
+}
+
+.space {
+  margin-bottom: 40px;
+}
+
+.break {
+  margin-top: 35px;
+  margin-left: -100px;
 }

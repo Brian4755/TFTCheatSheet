@@ -7,11 +7,18 @@
 
   <ul>
     <% reviews.forEach(review => { %>
-      <li>Item Name: <%= review.item %> </li>
-      <li>Champion: <%= review.champions %> </li>
-      <li>Tier: <%= review.tier %> </li>
-      <li>Notes: <%= review.notes %> </li>
-      <li> <%= review.owner.name %> </li>
+      <img class='profile-pic' src='<%= review.owner.avatar %>'>
+      <li class="owner-name"> <%= review.owner.name %> </li>
+      <li class="item-name"><strong>Item Name: </strong><%= review.item %> </li>
+      <li><strong>Champions:</strong>
+        <ul>
+          <% review.champions?.forEach(champion => { %>
+           <li class="champion-list"><%= champion.name %> </li>
+          <% }) %>
+        </ul>
+      </li>
+      <li><strong>Tier:</strong> <%= review.tier %> </li>
+      <li><strong>Notes:</strong> <%= review.notes %> </li>
       <% if (review.owner?.equals(user?.profile._id)) { %>
         <form action="/reviews/<%= review._id %>/edit" method="GET">
           <button class="btn" type="submit">Edit Review</button>
@@ -20,9 +27,10 @@
           <button class="btn" type="submit">Delete Review</button>
         </form>
         <form action="/reviews/<%= review._id %>" method="GET">
-          <button class="btn" type="submit">DETAILS</button>
+          <button class="btn" type="submit">Add champion to review</button>
         </form>
         <% } %>
+        <hr class="break">
         <div class="space"></div>
     <% }) %>
   </ul>

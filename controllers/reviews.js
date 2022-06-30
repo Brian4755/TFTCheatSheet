@@ -27,6 +27,7 @@ function create(req, res) {
 function index(req, res) {
   Review.find({})
   .populate('owner')
+  .populate('champions')
   .then(reviews => {
     res.render('reviews/index', {
       reviews,
