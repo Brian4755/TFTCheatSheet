@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/newreview.css">
 <%- include('../partials/nav') %>
 <main>
 <section>
@@ -11,7 +11,8 @@
     <label>Tier(A-D):</label>
     <input type="text" name="tier" autocomplete="off">
     <label>Notes:</label>
-    <input type="text" name="notes" autocomplete="off">
+    <textarea class="notes" name="notes" cols="40" rows="5"></textarea>
+    <!-- <input class="notes" type="text" name="notes" autocomplete="off"> -->
     <button class="btn" type="submit">Submit Review</button>
   </form>
 <% } %>

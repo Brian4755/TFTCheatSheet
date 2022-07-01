@@ -1,0 +1,18 @@
+.tftpenguin {
+  width: 500px;
+  margin-top: 15px;
+  margin-right: auto;
+  float: right;
+}
+
+.text-title {
+  margin-top: 45px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 20px;
+  text-align: center;
+}
