@@ -1,0 +1,18 @@
+main {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.line {
+  margin-bottom: 20px;
+}
+
+body {
+  background-image: url('/images/assets/poro1.png');
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: bottom 300% right 0%;
+}

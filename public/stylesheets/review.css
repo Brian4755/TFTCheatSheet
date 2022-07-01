@@ -53,3 +53,10 @@ body {
   margin-top: 35px;
   margin-left: -100px;
 }
+
+body {
+  background-image: url('/images/assets/dowsi.png');
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: bottom 50% right 30%;
+}
