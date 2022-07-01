@@ -1,0 +1,22 @@
+.btn {
+  left: 250px;
+  position: absolute;
+}
+
+li {
+  font-size: 15px;
+  margin-left: 55px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.break {
+  margin-left: -100px;
+  margin-bottom: 20px;
+}

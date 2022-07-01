@@ -1,6 +1,22 @@
 .notes {
   resize: none;
-  height: 200px;
+  height: 100px;
   width: 200px;
-  /* vertical-align: text-bottom; */
+  vertical-align: top;
+}
+
+form {
+  margin-left: 15px;
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.btn {
+  display: block;
 }

@@ -1,15 +1,20 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/review.css">
+<link rel="stylesheet" href="/stylesheets/championindex.css">
 <%- include('../partials/nav') %>
 
 <section>
   <h1>List of Added Champions</h1>
-  <% champions.forEach(champion => { %>
-    <li>Champions: <%= champion.name %> </li>
-    <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
-      <button class="btn" type="submit">x</button>
-    </form>
-  <% }) %>
+  <ul><h3>Champions:</h3>
+    <hr class="break">
+    <% champions.forEach(champion => { %>
+      <form action="/champions/<%= champion._id %>?_method=DELETE" method="POST">
+        <li> 
+          <%= champion.name %>
+          <button class="btn" type="submit">x</button>
+        </li>
+      </form>
+    <% }) %>
+  </ul>
 </section>
 
 <%- include('../partials/footer') %>
