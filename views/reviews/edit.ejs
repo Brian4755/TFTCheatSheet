@@ -4,7 +4,7 @@
 <section>
 <% if (user) { %>
   <h2>Update Review</h2>
-  <form action="/reviews" method="POST" autocomplete="off">
+  <form action="/reviews/<%= review._id %>?_method=PUT" method="POST" autocomplete="off">
     <label>Item Name:</label>
     <input type="text" name="item" autocomplete="off">
     <label>Tier(A-D):</label>

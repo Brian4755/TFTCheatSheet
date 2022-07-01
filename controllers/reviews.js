@@ -57,8 +57,12 @@ function deleteReview(req, res) {
 }
 
 function edit(req, res) {
-  res.render('reviews/edit', {
-    title: 'Update Review'
+  Review.findById(req.params.id)
+  .then(review => {
+    res.render('reviews/edit', {
+      title: 'Update Review',
+      review
+    })
   })
   .catch(err => {
     console.log(err)
@@ -69,7 +73,7 @@ function edit(req, res) {
 function update(req, res) {
   Review.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(review => {
-    res.redirect(`/reviews/${review._id}`)
+    res.redirect('/reviews')
   })
   .catch(err => {
     console.log(err)
