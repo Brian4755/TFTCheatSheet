@@ -27,3 +27,19 @@ body {
   background-size: 400px;
   background-position: top 230px right 0%;
 }
+
+.btn {
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.8s ease-in-out;
+  color: blueviolet;
+}
+
+.btn:hover {
+  background-color: #91C9FF;
+}

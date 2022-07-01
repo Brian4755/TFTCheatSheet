@@ -7,12 +7,11 @@
   <h2>Add a Review</h2>
   <form action="/reviews" method="POST" autocomplete="off">
     <label>Item Name:</label>
-    <input type="text" name="item" autocomplete="off">
+    <input type="text" name="item" autocomplete="off" placeholder="i.e. Warmog's armor">
     <label>Tier(A-D):</label>
-    <input type="text" name="tier" autocomplete="off">
+    <input type="text" name="tier" autocomplete="off" placeholder="insert tier from A-D">
     <label>Notes:</label>
-    <textarea class="notes" name="notes" cols="40" rows="5"></textarea>
-    <!-- <input class="notes" type="text" name="notes" autocomplete="off"> -->
+    <textarea class="notes" name="notes" cols="40" rows="5" placeholder="why the item is at it's tier..."></textarea>
     <button class="btn" type="submit">Submit Review</button>
   </form>
 <% } %>

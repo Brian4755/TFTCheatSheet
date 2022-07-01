@@ -50,7 +50,7 @@ body {
 }
 
 .break {
-  margin-top: 35px;
+  margin-top: 55px;
   margin-left: -100px;
 }
 
@@ -59,4 +59,21 @@ body {
   background-repeat: no-repeat;
   background-size: 250px;
   background-position: top 80px right 30%;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.7s ease-in-out;
+  color:rgb(28, 133, 133);
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #91C9FF;
 }

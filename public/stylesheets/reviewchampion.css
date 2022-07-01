@@ -1,5 +1,6 @@
 main {
   font-size: 18px;
+  margin-left: 15px;
 }
 
 h1 {
@@ -14,5 +15,20 @@ body {
   background-image: url('/images/assets/poro1.png');
   background-repeat: no-repeat;
   background-size: 400px;
-  background-position: top 200px right 0%;
+  background-position: top 400px right 0%;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.8s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #91C9FF;
 }

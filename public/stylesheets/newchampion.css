@@ -1,5 +1,7 @@
 form {
   font-size: 15px;
+  color:rgb(28, 133, 133);
+  font-weight: 700;
 }
 
 body {
@@ -7,4 +9,23 @@ body {
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: bottom 200% right 0%;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 120px;
+  height: 35px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.8s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #91C9FF;
+}
+
+input {
+  border-radius: 8px;
 }
