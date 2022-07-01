@@ -1,3 +1,9 @@
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
 .notes {
   resize: none;
   height: 100px;
@@ -5,25 +11,21 @@
   vertical-align: top;
 }
 
+.btn {
+  display: block;
+  margin-left: 25%;
+}
+
 form {
+  text-align: center;
   margin-left: 15px;
   margin-top: 25px;
   font-size: 15px;
-}
-
-h2 {
-  font-size: 35px;
-  text-align: center;
-  margin-left: 0;
-}
-
-.btn {
-  display: block;
 }
 
 body {
   background-image: url('/images/assets/poro1.png');
   background-repeat: no-repeat;
   background-size: 400px;
-  background-position: bottom 250% right 0%;
+  background-position: bottom 300% right 0%;
 }
