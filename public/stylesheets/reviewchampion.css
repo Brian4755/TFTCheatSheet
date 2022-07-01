@@ -14,5 +14,5 @@ body {
   background-image: url('/images/assets/poro1.png');
   background-repeat: no-repeat;
   background-size: 400px;
-  background-position: bottom 300% right 0%;
+  background-position: bottom -200px right 0%;
 }
